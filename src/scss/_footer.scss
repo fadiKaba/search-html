@@ -1,0 +1,33 @@
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 7%;
+    align-items: center;
+    display: grid;
+    align-content:center ;
+    
+   
+    .inner-footer{
+        text-align: center;
+        margin: 0 5%;
+        background-color: $trans-black;
+        box-shadow: 0 0 20px 20px $trans-black;
+        filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.712));
+        display: flex;
+        justify-content: space-around;
+        .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background-color: #000;
+            display: inline-block;
+            box-shadow: 0 0 1px 1px rgb(170, 170, 170);
+            
+           } 
+           .dot-small{
+               width: 8px;
+               height: 8px;
+           }
+        }
+    }

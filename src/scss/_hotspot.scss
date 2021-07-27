@@ -1,0 +1,38 @@
+.search-container-hotsopt{
+    display: flex;
+
+    color: #fff;
+    .search-page-title {
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-page-title-hotspot{
+        display:grid;
+        grid-template-columns: 1fr;
+        height: 20vh;
+        text-align: center;
+        align-content: center;
+        font-size: 12px;
+        line-height: 20px;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        span:nth-child(3){
+            letter-spacing: 5px;
+        }
+    }
+    .inner-div {
+        margin: 8px 4px;
+        height: 40vh;
+    }
+    img {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

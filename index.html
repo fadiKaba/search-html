@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="src/css/main.css">
+    <title>Search</title>
+</head>
+<body>
+
+    <!-- Search page contents -->
+    <div class="search">
+
+        <div id="sections" class="contents">
+              <div id="arts">
+
+                <div class="search-container">
+                    <div id="search-column-1">
+        
+                    </div>
+                    <div id="search-column-2">
+        
+                    </div>
+                    <div id="search-column-3">
+        
+                    </div>       
+                </div>
+                  
+              </div>
+              <div id="hotspots">
+
+                <div class="search-container-hotsopt">
+                    <div id="search-hotspot-column-1">
+        
+                    </div>
+                    <div id="search-hotspot-column-2">
+        
+                    </div>
+                    <div id="search-hotspot-column-3">
+        
+                    </div>       
+                </div>
+                  
+              </div>
+              <div id="lifes" class="search-container-life">
+                <div id="search-lifes-column-1">
+        
+                </div>
+                <div id="search-lifes-column-2">
+    
+                </div>
+                <div id="search-lifes-column-3">
+    
+                </div> 
+              </div>
+              <div id="tags" class="search-container-tags">
+                <div id="search-tags-column-1">
+        
+                </div>
+                <div id="search-tags-column-2">
+    
+                </div>
+                <div id="search-tags-column-3">
+    
+                </div>
+                <div class="carous">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/carrot.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/bananas.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/apple.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/carrot.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/bananas.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/apple.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="src/assets/ics/apple.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+              </div>
+
+        </div>
+
+        <!-- End Search page contents -->
+     
+ 
+
+     </div>
+
+
+     <!-- Icons bar-->
+
+     <div class="search-icons-container">
+
+        <div class="search-icons-inner-container">
+            <div>
+                <button id="location-btn" class="" onclick="showLocationContainer()">
+                   <img class="img-location" src="src/assets/ics/location.png" alt="location">
+                </button>
+            </div>
+            <div>
+                <button id="scroll-btn" class="scroll-btn">
+                    <img class="img-scroll" src="src/assets/ics/scroll.png" alt="scroll" >
+                </button>
+            </div>
+            <div>
+                <button class="" onclick="isOpenSearchModule()" id="search-btn">
+                    <img class="img-loup" src="src/assets/ics/loupe.png" alt="search">
+                </button>
+            </div>
+        </div>
+
+        <div class="mini-nav">
+            <a id="btn-arts" class="mini-bar-link router-link-active" onclick="removeTransletTop()" to="/arts">Art</a>
+            <a id="btn-hotspots" class="mini-bar-link" onclick="removeTransletTop()" to="/hotspots">Hotspot</a>
+            <a id="btn-lifes" class="mini-bar-link" onclick="removeTransletTop()" to="/lifes">02:59</router-link>
+            <a id="btn-tags" class="mini-bar-link tag-icon-link" onclick="transletTop()" to="/tags"><img class="tag-icon" src="src/assets/ics/tag.png">Tags</a>
+        </div>
+
+        <div id="locations-container" class="hide-r">
+            <ul>
+                <li class="location-element">Germany</li>
+                <li class="location-element">USA</li>
+                <li class="location-element">Japan</li>
+                <li class="location-element">France</li>
+                <li class="location-element">England</li>
+            </ul>
+        </div>
+
+        <div id="check-icon-container" class="check-icon-container hide-r">
+            <button onclick="setLocation()">
+                <img class="check-icon" src="src/assets/ics/check.png" alt="check">
+            </button>
+        </div> 
+
+    </div>
+
+     <!-- End Icons bar-->
+
+     <!-- Search Moduke -->
+
+     <div class="search-view display-none">
+        <div id="search-container-1">
+            <div class="input-container">
+                <input onkeyup="search(this)" v-model="typing" ref="sinput" type="text" id="search-input" autocomplete="off">
+                <div id="search-result" class="not-visible">
+                    <ul>
+                       <!-- <li v-for="result in resComputed" :key="result.id"><span class="dot"></span> <span>example</span></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- End Search Module -->
+
+     <!-- Footer -->
+
+     <footer>
+        <div class="inner-footer">
+            <a href="#"><span class="dot"></span></a>
+            <a href="#"><span class="dot dot-small"></span></a>
+            <a href="#"><span class="dot"></span></a>
+            <a href="#"><span class="dot"></span></a>
+            <a href="#"><span class="dot"></span></a>
+        </div>
+    </footer>
+
+     <!-- End Footer -->
+     
+     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
