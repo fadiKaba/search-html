@@ -319,7 +319,6 @@ function hideModule(){
     document.querySelector('.search-view').addEventListener('click', function(e){
     if(e.target == this){
       e.target.classList.remove('display-show');
-      searchInput.value = '';
     }
 })
 }
@@ -366,6 +365,7 @@ function miniBarLinksFunctionality(){
     miniBarLinks.forEach(el => {
         el.addEventListener('click', function(){
             miniBarLinks.forEach(er => er.classList.remove('router-link-active'));
+            window.scrollTo(0, 0);
             el.classList.add('router-link-active');
             selectSection(el.getAttribute('id'));
             if(isOpenLocations){
