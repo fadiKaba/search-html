@@ -19,6 +19,7 @@ html, body{
 }
 body{
     background-color: #000;
+    font-family: sans-serif;
 }
 
 li{
@@ -86,8 +87,11 @@ a{
     }
 }
 
-body { font-family: sans-serif; }
-
 .gallery {
   background: #EEE;
 }
+
+.search-container, .search-container-hotsopt, .search-container-life, .search-container-tags{
+    justify-content: center;
+}
+
